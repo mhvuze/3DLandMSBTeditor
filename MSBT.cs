@@ -83,8 +83,8 @@ namespace MsbtEditor
 		{
 			string result = string.Empty;
 			foreach (Value value in Values)
-				result += Encoding.Unicode.GetString(value.Data).Replace("\n", "\r\n");
-			return result;
+				result += Encoding.UTF8.GetString(value.Data).Replace("\n", "\r\n"); // Unicode
+            return result;
 		}
 	}
 
